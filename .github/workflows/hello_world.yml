@@ -38,6 +38,7 @@ jobs:
   hello-world-windows:
    
     runs-on: windows-latest
+    needs: hello-world-ubuntu
       
     steps:
       
