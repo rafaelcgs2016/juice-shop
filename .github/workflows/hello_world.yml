@@ -48,7 +48,7 @@ jobs:
   hello-world-macos:
    
     runs-on: macos-latest
-    # needs: hello-world-ubuntu
+    needs: hello-world-windows
       
     steps:
       
