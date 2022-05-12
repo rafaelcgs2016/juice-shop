@@ -1,3 +1,4 @@
+name: DAST OWASP
 on: [push]
 
 jobs:
