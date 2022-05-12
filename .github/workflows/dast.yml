@@ -4,6 +4,11 @@ on: [push]
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      
     name: Scan the webapplication
     steps:
       - name: Checkout
@@ -15,5 +20,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: 'https://impacta-juice-shop.herokuapp.com'
-          rules_file_name: '.zap/rules.tsv'
+          #rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
